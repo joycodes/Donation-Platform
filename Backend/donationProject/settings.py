@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,6 +34,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+cloudinary.config( 
+  cloud_name = "dgwsgoxjd", 
+  api_key = "269319899829333", 
+  api_secret = "Ge8SNu-60CxUS9Nefa68cwGVrlw" 
+)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'donationApp',
+     'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
