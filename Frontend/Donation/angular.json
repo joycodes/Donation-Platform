@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "Donation"
+  "cli": {
+    "analytics": false
+  }
 }
