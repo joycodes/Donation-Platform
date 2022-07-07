@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaymentComponent } from './payment/payment.component';
-import { FormsModule } from '@angular/forms';  // <<<< import it here
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';  // <<<< import it here
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import { FormsModule } from '@angular/forms';  // <<<< import it here
     PaymentComponent
   ],
   imports: [
-    BrowserModule, FormsModule, // <<<< And here
-    AppRoutingModule
+    BrowserModule, FormsModule,ReactiveFormsModule, // <<<< And here
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
